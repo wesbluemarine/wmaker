@@ -2,6 +2,9 @@ name: C/C++ CI
 
 on: [push]
 
+permissions:
+  contents: write
+
 jobs:
   build:
 
@@ -30,5 +33,3 @@ jobs:
         tag: ${{ github.ref }}
         overwrite: true
         body: "Test release"
-        permissions: write-all
-        
