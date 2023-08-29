@@ -21,3 +21,12 @@ jobs:
       run: make
     - name: checkinstall
       run: sudo checkinstall --pkgversion="0.95.9-rl"
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: /home/runner/work/wmaker/wmaker/wmaker_0.95.9-rl-1_amd64.deb
+        asset_name: windowmkaker
+        tag: ${{ github.ref }}
+        overwrite: true
+        body: "Test release"
