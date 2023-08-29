@@ -12,10 +12,12 @@ jobs:
     - name: update
       run: sudo apt update
     - name: deps
-      run: sudo apt install libbsd-dev libmagic-dev libpng-dev libtiff-dev libxft-dev libxinerama-dev libxmu-dev libxpm-dev libxrandr-dev
+      run: sudo apt install checkinstall libbsd-dev libmagic-dev libpng-dev libtiff-dev libxft-dev libxinerama-dev libxmu-dev libxpm-dev libxrandr-dev
     - name: script generation
       run: ./autogen.sh
     - name: configure
       run: ./configure
     - name: make
       run: make
+    - name: checkinstall
+      run: sudo checkinstall
