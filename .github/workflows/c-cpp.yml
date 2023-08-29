@@ -6,9 +6,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    permissions:
-  contents: write
-    
+   
     steps:
     - uses: actions/checkout@v1
     - name: update
@@ -32,4 +30,5 @@ jobs:
         tag: ${{ github.ref }}
         overwrite: true
         body: "Test release"
+        permissions: write-all
         
