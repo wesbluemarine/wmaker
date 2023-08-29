@@ -12,7 +12,7 @@ jobs:
     - name: update
       run: sudo apt update
     - name: deps
-      run: sudo apt-get build-dep wmaker
+      run: sudo apt install giflib libbsd-dev libmagic-dev libpng-dev libtiff-dev libxft-dev libxinerama-dev libxmu-dev libxpm-dev libxrandr-dev
     - name: script generation
       run: ./autogen.sh
     - name: configure
