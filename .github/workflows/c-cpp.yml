@@ -20,4 +20,4 @@ jobs:
     - name: make
       run: make
     - name: checkinstall
-      run: sudo checkinstall
+      run: sudo checkinstall --pkgversion="0.95.9-rl"
